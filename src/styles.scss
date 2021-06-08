@@ -1,1 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'styles/variables';
+@import 'styles/fonts';
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: $font-family-roboto;
+  background-color: $concrete-gray;
+  color: $black;
+}

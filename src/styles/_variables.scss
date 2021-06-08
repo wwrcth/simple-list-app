@@ -1,0 +1,101 @@
+// The list of project specific variables
+
+// Colors
+$black: #333;
+$dark-gray: #626469;
+$light-gray: #9fa0a4;
+$silver-gray: #cbcbcb;
+$mercury-gray: #e7e6e6;
+$concrete-gray: #f3f2f2;
+$mystic-gray: #fafafa;
+$white: #fff;
+$transparent: transparent;
+
+// Font sizes
+$size-190: 11.875rem;
+$size-165: 10.3125rem;
+$size-150: 9.375rem;
+$size-140: 8.75rem;
+$size-126: 7.875rem;
+$size-115: 7.1875rem;
+$size-110: 6.875rem;
+$size-80: 5rem;
+$size-72: 4.5rem;
+$size-70: 4.375rem;
+$size-60: 3.75rem;
+$size-56: 3.5rem;
+$size-55: 3.438rem;
+$size-50: 3.125rem;
+$size-48: 3rem;
+$size-45: 2.813rem;
+$size-44: 2.75rem;
+$size-43: 2.688rem;
+$size-42: 2.625rem;
+$size-40: 2.5rem;
+$size-37: 2.3125rem;
+$size-36: 2.25rem;
+$size-35: 2.188rem;
+$size-34: 2.125rem;
+$size-30: 1.875rem;
+$size-28: 1.75rem;
+$size-27: 1.6875rem;
+$size-26: 1.625rem;
+$size-25: 1.563rem;
+$size-24: 1.5rem;
+$size-23: 1.438rem;
+$size-22: 1.375rem;
+$size-21: 1.3125rem;
+$size-20: 1.25rem;
+$size-19: 1.188rem;
+$size-18: 1.125rem;
+$size-16: 1rem;
+$size-15: 0.938rem;
+$size-14: 0.875rem;
+$size-13: 0.8125rem;
+$size-12: 0.75rem;
+$size-10: 0.625rem;
+$size-9: 0.563rem;
+$size-8: 0.5rem;
+$size-5: 0.3125rem;
+
+// Font weight
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-semi-bold: 600;
+$font-weight-bold: 700;
+
+// Font styles
+$font-style-italic: italic;
+
+// Font families
+$font-family-roboto: 'Roboto', sans-serif;
+// todo: use font awesome for winner highliting
+$font-family-font-awesome: 'Font Awesome';
+
+// Z-index layer level
+$z-index-1: 1;
+$z-index-2: 2;
+$z-index-3: 3;
+$z-index-4: 4;
+$z-index-5: 5;
+$z-index-6: 6;
+$z-index-7: 7;
+$z-index-8: 8;
+
+// Other
+
+$container-border: 1px solid $mercury-gray;
+
+$box-shadow: 0 2px 4px 0 rgba($black, 0.2);
+$box-shadow-hover: 0 0 2px 0 rgba($black, 0.1), 0 7px 10px 0 rgba($black, 0.15);
+$container-shadow: 0 0 2px 0 rgba($black, 0.14), 0 3px 5px 0 rgba($black, 0.1);
+$header-shadow: 0 4px 4px 0 rgba($black, 0.1);
+$tooltip-shadow: 0 0 2px 0 rgba($black, 0.14), 0 7px 10px 0 rgba($black, 0.1);
+$tooltip-bottom-shadow: 0 0 10px 0 rgba($black, 0.14), 0 7px 10px 0 rgba($black, 0.1);
+$bottom-container-shadow: 0 3px 5px 0 rgba($black, 0.1);
+$full-bottom-shadow: 0 5px 5px 0 rgba($black, 0.1);
+
+$image-overlay-background: linear-gradient(180deg, rgba($black, 0.1) 0%, rgba($black, 0.5) 100%);
+
+$hover-animation: all 0.3s;
+$common-indentation: 20px;
