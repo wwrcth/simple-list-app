@@ -22,15 +22,17 @@ export const reducer = createReducer(
   initialState,
   on(
     WinnerActions.FetchWinnersSuccess,
-    (state, { winners }) => ({
-      ...state, winners,
-    }),
+    (state, { winners }) => ({ ...state, winners }),
   ),
   on(
     WinnerActions.FetchWinnersError,
     (state) => ({
       ...state,
     }),
+  ),
+  on(
+    WinnerActions.ClearWinners,
+    (state) => ({ ...state, winner: [] }),
   ),
 );
 

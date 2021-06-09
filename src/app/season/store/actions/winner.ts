@@ -15,3 +15,7 @@ export const FetchWinnersSuccess = createAction(
 export const FetchWinnersError = createAction(
   '[Seasons] Fetch Winners Error',
 );
+
+export const ClearWinners = createAction(
+  '[Seasons] Clear winners',
+);

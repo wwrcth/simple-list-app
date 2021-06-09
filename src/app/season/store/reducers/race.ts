@@ -22,15 +22,17 @@ export const reducer = createReducer(
   initialState,
   on(
     RaceActions.FetchRacesSuccess,
-    (state, { races }) => ({
-      ...state, races,
-    }),
+    (state, { races }) => ({ ...state, races }),
   ),
   on(
     RaceActions.FetchRacesError,
     (state) => ({
       ...state,
     }),
+  ),
+  on(
+    RaceActions.ClearRaces,
+    (state) => ({ ...state, races: [] }),
   ),
 );
 
