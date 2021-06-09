@@ -1,0 +1,54 @@
+@import '~src/styles/style-import';
+
+:host {
+  display: block;
+  padding: 10px 0;
+}
+
+.table {
+  width: 100%;
+  border-spacing: 0;
+  box-shadow: $table-box-shadow;
+  table-layout: fixed;
+}
+
+.heading-row {
+  height: 56px;
+}
+
+.body-row {
+  height: 48px;
+
+  &.clickable {
+    cursor: pointer;
+  }
+}
+
+.cell {
+  padding: 0;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: rgba($black, 0.12);
+  text-align: left;
+
+  &:first-child {
+    padding-left: 24px;
+  }
+
+  &:last-child {
+    padding-right: 24px;
+  }
+}
+
+.heading-cell {
+  color: rgba($black, 0.54);
+  font-weight: $font-weight-bold;
+}
+
+.body-cell {
+  color: rgba($black, 0.87);
+
+  &.highlighted {
+    background-color: rgba(255,0,0,0.1);;
+  }
+}

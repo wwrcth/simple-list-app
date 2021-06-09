@@ -1,0 +1,29 @@
+<table class="table">
+  <thead>
+    <tr class="heading-row row">
+      <th
+        *ngFor="let heading of data.headings"
+        class="heading-cell cell text-small"
+        role="columnheader"
+      >{{ heading }}</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <ng-container *ngIf="data.body.clickCallback; else notClickableRow">
+      <tr *ngFor="let row of data.body.rows" class="body-row clickable row" (click)="onRowClick(row)">
+        <ng-container *ngTemplateOutlet="bodyCell; context: { row: row }"></ng-container>
+      </tr>
+    </ng-container>
+  </tbody>
+</table>
+
+<ng-template #notClickableRow>
+  <tr *ngFor="let row of data.body.rows" class="body-row row">
+    <ng-container *ngTemplateOutlet="bodyCell; context: { row: row }"></ng-container>
+  </tr>
+</ng-template>
+
+<ng-template #bodyCell let-row="row">
+  <td *ngFor="let rowItem of row.cells" class="body-cell cell text-small" [class.highlighted]="row.isRowHighlighted">{{ rowItem }}</td>
+</ng-template>
