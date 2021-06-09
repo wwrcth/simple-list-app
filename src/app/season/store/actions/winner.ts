@@ -1,6 +1,6 @@
 import { createAction, props } from '@ngrx/store';
 
-import { WinnerModel } from '../../models/seasons.model';
+import { WinnerModel } from '../../models/winner.model';
 
 export const FetchWinners = createAction(
   '[Seasons] Fetch Winners',

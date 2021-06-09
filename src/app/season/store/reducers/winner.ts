@@ -4,7 +4,7 @@ import * as fromRoot from './index';
 import { rootSelector } from './root-selector';
 import { WinnerActions } from '../actions';
 
-import { WinnerModel } from '../../models/seasons.model';
+import { WinnerModel } from '../../models/winner.model';
 
 export interface WinnerState {
   winners: WinnerModel[];
