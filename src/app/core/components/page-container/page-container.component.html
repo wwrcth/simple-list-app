@@ -1,0 +1,9 @@
+<app-spinner *ngIf="isSpinnerVisible | async"></app-spinner>
+
+<div class="content-wrapper">
+  <app-header></app-header>
+
+  <main>
+    <ng-content></ng-content>
+  </main>
+</div>

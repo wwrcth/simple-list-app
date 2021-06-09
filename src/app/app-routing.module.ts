@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { routePath } from './seasons/constants/route-path.constant';
+import { routePath } from './core/constants/route-path.constant';
 
 const routes: Routes = [
   {
     path: routePath.seasons,
-    loadChildren: () => import('./seasons/seasons.module').then(m => m.SeasonsModule),
+    loadChildren: () => import('./season/season.module').then(m => m.SeasonModule),
   },
   {
     path: routePath.notFound,
