@@ -1,16 +1,6 @@
 import { createAction, props } from '@ngrx/store';
 
-export const FetchData = createAction(
-  '[Seasons] Fetch Data',
-);
-
-export const FetchDataSuccess = createAction(
-  '[Seasons] Fetch Data Success',
-);
-
-export const FetchDataError = createAction(
-  '[Seasons] Fetch Data Error',
-);
+import { WinnerModel } from '../../models/seasons.model';
 
 export const FetchWinners = createAction(
   '[Seasons] Fetch Winners',
@@ -19,6 +9,7 @@ export const FetchWinners = createAction(
 
 export const FetchWinnersSuccess = createAction(
   '[Seasons] Fetch Winners Success',
+  props<{ winners: WinnerModel[] }>(),
 );
 
 export const FetchWinnersError = createAction(
