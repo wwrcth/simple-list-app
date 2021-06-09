@@ -1,0 +1,28 @@
+@import '~src/styles/style-import';
+
+:host {
+  display: block;
+}
+
+.heading-container {
+  display: flex;
+  align-items: center;
+}
+
+.link {
+  display: block;
+  text-decoration: none;
+  color: $black;
+  margin-right: 5px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  font-size: 24px;
+  margin-left: 10px;
+  color: $red;
+}

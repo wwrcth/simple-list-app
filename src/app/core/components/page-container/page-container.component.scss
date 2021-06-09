@@ -5,14 +5,22 @@
   flex-direction: column;
   position: relative;
   height: 100%;
+}
 
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 10px 20px;
+}
+
+main {
+  @include page-layout;
+}
+
+@include media-breakpoint-down(sm) {
   .content-wrapper {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-  }
-
-  main {
-    @include page-layout;
+    padding: 5px 10px;
   }
 }
+

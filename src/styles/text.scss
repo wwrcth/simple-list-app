@@ -1,0 +1,33 @@
+.h1 {
+  font-size: $size-30;
+  line-height: $size-36;
+  font-weight: $font-weight-bold;
+  margin: 0 0 15px;
+}
+
+.text-nano {
+  font-size: $size-12;
+  line-height: $size-18;
+}
+
+.text-small {
+  font-size: $size-14;
+  line-height: $size-21;
+}
+
+.text-medium {
+  font-size: $size-16;
+  line-height: $size-24;
+}
+
+.text-big {
+  font-size: $size-18;
+  line-height: $size-27;
+}
+
+@include media-breakpoint-down(sm) {
+  .h1 {
+    font-size: $size-25;
+    line-height: $size-30;
+  }
+}
