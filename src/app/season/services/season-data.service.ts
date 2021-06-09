@@ -45,6 +45,13 @@ export class SeasonDataService {
     };
   }
 
+  mapRacesWithWorldChampionResults(races: RaceModel[], winnerDriverId: string | undefined): RaceModel[] {
+    return races.map((race) => ({
+      ...race,
+      ...race.winner && { winner: { ...race.winner, isWorldChampion: race.winner?.driverId === winnerDriverId } }
+    }));
+  }
+
   getWinners(season: number): Observable<WinnerModel> {
     return this.http
       .get<SeasonBeModel>(`${ergastApi}/f1/${season}/driverStandings.json`)

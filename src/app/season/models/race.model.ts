@@ -95,5 +95,6 @@ export interface RaceModel {
     driverId: string;
     familyName: string;
     givenName: string;
+    isWorldChampion?: boolean;
   }
 }
