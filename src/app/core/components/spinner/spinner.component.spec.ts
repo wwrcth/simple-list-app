@@ -8,7 +8,7 @@ describe('SpinnerComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SpinnerComponent ]
+      declarations: [SpinnerComponent],
     })
     .compileComponents();
   });
@@ -19,7 +19,7 @@ describe('SpinnerComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create spinner component', () => {
     expect(component).toBeTruthy();
   });
 });
