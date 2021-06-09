@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { CommonModule } from '@angular/common'
+import { CommonModule } from '@angular/common';
 
 import { SeasonRoutingModule } from './season-routing.module';
 import { SeasonStoreModule } from './season-store.module';

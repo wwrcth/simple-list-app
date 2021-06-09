@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy, ChangeDetectorRef, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { Subscription } from 'rxjs';
@@ -17,7 +17,7 @@ import { racesTableData } from '../../constants/table.constant';
   styleUrls: ['./season.page.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class SeasonPageComponent implements OnInit {
+export class SeasonPageComponent implements OnInit, OnDestroy {
   tableData: TableModel = racesTableData;
   racesSubscription: Subscription;
 

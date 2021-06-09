@@ -41,6 +41,6 @@ export class WinnerEffects {
       ofType(WinnerActions.FetchWinnersError),
       tap((err) => console.error(`Error occurred during request: ${err}`)),
     ),
-    { dispatch: false },
+  { dispatch: false },
   );
 }

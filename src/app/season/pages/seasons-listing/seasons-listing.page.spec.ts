@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SeasonsListingPageComponent } from './seasons.page';
+import { SeasonsListingPageComponent } from './seasons-listing.page';
 
-describe('SeasonsPageComponent', () => {
+describe('SeasonsListingPageComponent', () => {
   let component: SeasonsListingPageComponent;
   let fixture: ComponentFixture<SeasonsListingPageComponent>;
 
-  beforeEach(async () => {
+  beforeEach(async() => {
     await TestBed.configureTestingModule({
-      declarations: [ SeasonsListingPageComponent ]
+      declarations: [SeasonsListingPageComponent],
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {
@@ -19,7 +19,7 @@ describe('SeasonsPageComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create seasons listing page component', () => {
     expect(component).toBeTruthy();
   });
 });

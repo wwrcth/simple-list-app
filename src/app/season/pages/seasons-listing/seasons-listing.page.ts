@@ -1,9 +1,9 @@
-import {Component, OnInit, ChangeDetectionStrategy, OnDestroy, ChangeDetectorRef} from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy, OnDestroy, ChangeDetectorRef } from '@angular/core';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { Store } from '@ngrx/store';
 
-import { WinnerActions } from '../../store/actions'
+import { WinnerActions } from '../../store/actions';
 import { fromWinner } from '../../store/reducers';
 
 import { WinnerModel } from '../../models/winner.model';

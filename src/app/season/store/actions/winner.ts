@@ -4,7 +4,7 @@ import { WinnerModel } from '../../models/winner.model';
 
 export const FetchWinners = createAction(
   '[Seasons] Fetch Winners',
-  props<{ startSeason: number, endSeason: number }>(),
+  props<{ startSeason: number; endSeason: number }>(),
 );
 
 export const FetchWinnersSuccess = createAction(

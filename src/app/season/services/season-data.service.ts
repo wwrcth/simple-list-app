@@ -13,7 +13,7 @@ export class SeasonDataService {
   constructor(private http: HttpClient) {}
 
   private mapWinnersData(data: SeasonBeModel): WinnerModel {
-    const [{ DriverStandings, season}] = data.MRData.StandingsTable.StandingsLists
+    const [{ DriverStandings, season }] = data.MRData.StandingsTable.StandingsLists;
     const firstPosition = '1';
     const { Driver } = DriverStandings.find(driverStanding => driverStanding.position === firstPosition) || {};
 
@@ -48,7 +48,7 @@ export class SeasonDataService {
   mapRacesWithWorldChampionResults(races: RaceModel[], winnerDriverId: string | undefined): RaceModel[] {
     return races.map((race) => ({
       ...race,
-      ...race.winner && { winner: { ...race.winner, isWorldChampion: race.winner?.driverId === winnerDriverId } }
+      ...race.winner && { winner: { ...race.winner, isWorldChampion: race.winner?.driverId === winnerDriverId } },
     }));
   }
 

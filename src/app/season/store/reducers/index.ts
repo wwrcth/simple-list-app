@@ -5,7 +5,7 @@ import * as fromWinner from './winner';
 
 export interface State {
   race: fromRace.RaceState;
-  winner: fromWinner.WinnerState,
+  winner: fromWinner.WinnerState;
 }
 
 export function reducers(state: State, action: Action) {
