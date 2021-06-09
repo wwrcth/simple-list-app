@@ -2,10 +2,10 @@ import { Injectable } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { ofType, createEffect, Actions } from '@ngrx/effects';
 import { switchMap, map, catchError, tap, finalize } from 'rxjs/operators';
-import { forkJoin } from 'rxjs';
+import { forkJoin, of } from 'rxjs';
 
 import { WinnerActions } from '../actions';
-import * as UiActions from '../../../core/store/actions/ui';
+import { UiActions } from '../../../core/store/actions';
 
 import { SeasonDataService } from '../../services/season-data.service';
 
@@ -17,7 +17,6 @@ export class WinnerEffects {
     private dataManagementService: SeasonDataService,
   ) {}
 
-  // todo: add error handling + spinner logic
   fetchWinners$ = createEffect(() =>
     this.actions$.pipe(
       ofType(WinnerActions.FetchWinners),
@@ -28,8 +27,20 @@ export class WinnerEffects {
             new Array(endSeason - startSeason + 1),
             (_x, i) => this.dataManagementService.getWinners(i + startSeason),
           ),
-        ).pipe(map((winners) => WinnerActions.FetchWinnersSuccess({ winners }))),
+        ).pipe(
+          map((winners) => WinnerActions.FetchWinnersSuccess({ winners })),
+          catchError((err) => of(WinnerActions.FetchWinnersError(err))),
+          finalize(() => this.store.dispatch(UiActions.HideSpinner())),
+        ),
       ),
     ),
+  );
+
+  fetchWinnersError$ = createEffect(() =>
+    this.actions$.pipe(
+      ofType(WinnerActions.FetchWinnersError),
+      tap((err) => console.error(`Error occurred during request: ${err}`)),
+    ),
+    { dispatch: false },
   );
 }

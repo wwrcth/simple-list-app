@@ -14,6 +14,7 @@ export const FetchRacesSuccess = createAction(
 
 export const FetchRacesError = createAction(
   '[Race] Fetch Races Error',
+  props<{ err: Error }>(),
 );
 
 export const ClearRaces = createAction(

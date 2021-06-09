@@ -25,12 +25,6 @@ export const reducer = createReducer(
     (state, { winners }) => ({ ...state, winners }),
   ),
   on(
-    WinnerActions.FetchWinnersError,
-    (state) => ({
-      ...state,
-    }),
-  ),
-  on(
     WinnerActions.ClearWinners,
     (state) => ({ ...state, winner: [] }),
   ),

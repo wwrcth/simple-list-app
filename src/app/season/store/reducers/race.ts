@@ -25,12 +25,6 @@ export const reducer = createReducer(
     (state, { races }) => ({ ...state, races }),
   ),
   on(
-    RaceActions.FetchRacesError,
-    (state) => ({
-      ...state,
-    }),
-  ),
-  on(
     RaceActions.ClearRaces,
     (state) => ({ ...state, races: [] }),
   ),

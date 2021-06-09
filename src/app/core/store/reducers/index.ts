@@ -11,3 +11,7 @@ export const reducers: ActionReducerMap<State> = {
 };
 
 export const reducer: ActionReducer<State> = combineReducers(reducers);
+
+export {
+  fromUi,
+};
