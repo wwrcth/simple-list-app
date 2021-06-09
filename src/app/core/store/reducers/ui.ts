@@ -1,4 +1,4 @@
-import {createReducer, createSelector, on} from '@ngrx/store';
+import { createReducer, createSelector, on } from '@ngrx/store';
 
 import * as Actions from '../actions/ui';
 import * as fromRoot from './';

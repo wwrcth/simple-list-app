@@ -6,11 +6,11 @@ describe('PageContainerComponent', () => {
   let component: PageContainerComponent;
   let fixture: ComponentFixture<PageContainerComponent>;
 
-  beforeEach(async () => {
+  beforeEach(async() => {
     await TestBed.configureTestingModule({
-      declarations: [ PageContainerComponent ]
+      declarations: [PageContainerComponent],
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {
@@ -19,7 +19,7 @@ describe('PageContainerComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create page container component', () => {
     expect(component).toBeTruthy();
   });
 });

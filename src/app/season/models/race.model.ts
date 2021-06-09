@@ -6,14 +6,14 @@ interface CircuitBeModel {
     lat: string;
     locality: string;
     long: string;
-  },
+  };
   circuitId: string;
   circuitName: string;
   url: string;
 }
 
 interface RaceBeModel {
-  Circuit: CircuitBeModel,
+  Circuit: CircuitBeModel;
   date: string;
   raceName: string;
   round: string;
@@ -30,22 +30,22 @@ interface RaceRoundBeModel extends RaceBeModel {
       name: string;
       nationality: string;
       url: string;
-    }
+    };
     FasterLap: {
       AverageSpeed: {
         units: string;
         speed: string;
-      }
+      };
       Time: {
         time: string;
-      }
+      };
       lap: string;
       rank: string;
-    }
+    };
     Time: {
       millis: string;
       time: string;
-    }
+    };
     grid: string;
     laps: string;
     number: string;
@@ -96,5 +96,5 @@ export interface RaceModel {
     familyName: string;
     givenName: string;
     isWorldChampion?: boolean;
-  }
+  };
 }

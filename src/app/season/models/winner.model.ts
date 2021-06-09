@@ -34,6 +34,6 @@ export interface WinnerModel {
     driverId: string;
     familyName: string;
     givenName: string;
-  }
+  };
   season: string;
 }

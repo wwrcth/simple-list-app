@@ -1,8 +1,8 @@
-import {ChangeDetectionStrategy, Component} from '@angular/core';
-import { Store } from "@ngrx/store";
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 
-import { fromUi } from '../../store/reducers'
+import { fromUi } from '../../store/reducers';
 
 @Component({
   selector: 'app-page-container',

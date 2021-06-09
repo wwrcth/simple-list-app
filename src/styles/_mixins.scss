@@ -10,10 +10,11 @@ $grid-breakpoints: (
   display: flex;
   flex-direction: column;
   flex: 1 0 auto;
-  // fixed IE11 height page bug
   min-height: 1px;
 }
 
+// copy-paste from bootstrap to make life a bit easier
+/* stylelint-disable */
 @function breakpoint-next($name, $breakpoints: $grid-breakpoints, $breakpoint-names: map-keys($breakpoints)) {
   $n: index($breakpoint-names, $name);
   @return if($n != null and $n < length($breakpoint-names), nth($breakpoint-names, $n + 1), null);
@@ -39,9 +40,10 @@ $grid-breakpoints: (
     @content;
   }
 }
+/* stylelint-enable */
 
 @mixin iconic-font {
-  /* use !important to prevent issues with browser extensions that change fonts */
+  // !important for preventing issues with browser extensions that change fonts
   /* stylelint-disable-next-line font-family-no-missing-generic-family-keyword */
   font-family: 'Icomoon' !important;
   speak: none;
@@ -51,7 +53,7 @@ $grid-breakpoints: (
   text-transform: none;
   line-height: 1;
 
-  /* Better Font Rendering =========== */
+  // better font rendering
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

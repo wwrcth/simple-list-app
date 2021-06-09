@@ -6,11 +6,11 @@ describe('TableComponent', () => {
   let component: TableComponent;
   let fixture: ComponentFixture<TableComponent>;
 
-  beforeEach(async () => {
+  beforeEach(async() => {
     await TestBed.configureTestingModule({
       declarations: [ TableComponent ]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {
@@ -19,7 +19,7 @@ describe('TableComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create table component', () => {
     expect(component).toBeTruthy();
   });
 });
