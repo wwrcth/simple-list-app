@@ -2,12 +2,12 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { SeasonPageComponent } from './pages/season/season.page';
-import { SeasonsPageComponent } from './pages/seasons/seasons.page';
+import { SeasonsListingPageComponent } from './pages/seasons-listing/seasons-listing.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: SeasonsPageComponent,
+    component: SeasonsListingPageComponent,
   },
   {
     path: ':seasonYear',
@@ -19,4 +19,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class SeasonsRoutingModule {}
+export class SeasonRoutingModule {}

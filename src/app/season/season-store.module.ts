@@ -7,9 +7,9 @@ import { reducers } from './store/reducers';
 
 @NgModule({
   imports: [
-    StoreModule.forFeature('seasons', reducers),
+    StoreModule.forFeature('season', reducers),
     EffectsModule.forFeature(SeasonsEffects),
   ],
   exports: [],
 })
-export class SeasonsStoreModule {}
+export class SeasonStoreModule {}
