@@ -1,0 +1,18 @@
+@import 'mixins';
+
+[class^='icon-'],
+[class*=' icon-'] {
+  @include iconic-font;
+}
+
+.icon-earth::before {
+  content: '\e9ca';
+}
+
+.icon-flag::before {
+  content: '\e9cc';
+}
+
+.icon-star::before {
+  content: '\e9d9';
+}

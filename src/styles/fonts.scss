@@ -27,3 +27,13 @@
   font-weight: 700;
   font-style: normal;
 }
+
+@font-face {
+  font-display: block;
+  font-family: 'Icomoon';
+  src:
+    url('/assets/fonts/icomoon/icomoon.woff2?v=1') format('woff2'),
+    url('/assets/fonts/icomoon/icomoon.woff?v=1') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
