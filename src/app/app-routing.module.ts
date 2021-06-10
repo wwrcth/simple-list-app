@@ -23,7 +23,6 @@ const routes: Routes = [
   },
 ];
 
-// scrollPositionRestoration: 'top',
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
