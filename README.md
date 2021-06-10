@@ -1,27 +1,44 @@
 # SimpleListApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.3.
+This project is a frontend application with a simple list that shows the F1 world champions starting from 2005 until
+now.
 
-## Development server
+## Getting started
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+For running application install all dependencies throw `npm install` and run `npm start`.
 
-## Code scaffolding
+## Architecture decisions
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Modules
 
-## Build
+Application includes following module types:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+* Features (lazy-loaded for better performance)
+* Core (includes main components and logic which are reused throw all application)
 
-## Running unit tests
+### State Management
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Application uses NgRx architecture under the hood, including Actions, Effects, Reducers and Selectors which communicate with each other.
 
-## Running end-to-end tests
+### Dev environment
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+I tried to configure dev environment to make further development comfortable/easier.
 
-## Further help
+For linting I used eslint with a few angular-, typescript-support libraries.
+For testing I prefer jest, that's why configured it too.
+You can check it's work with `npm lint` and `npm test` commands.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### Iconic font
+
+Custom iconic font is added for showing my experience and understanding how it works. 
+I would agree that in my case it could be just simple png/svg stored in assets :) 
+
+### Styles setup
+
+I added global styles which are used in whole application + Setup global variables which simplify markup writing. 
+
+### Final words
+
+The whole structure may look a bit massive and huge. For example, I personally agree with idea that state management for small applications is redundant.
+
+Take into account that I just wanted to show my knowledge and create architecture which will be convenient for big applications. 
