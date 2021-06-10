@@ -10,6 +10,7 @@ import { RaceModel } from '../../models/race.model';
 import { TableBodyModel, TableModel } from '../../models/table.model';
 
 import { racesTableData } from '../../constants/table.constant';
+import { dictionary } from '../../../core/constants/dictionary';
 
 @Component({
   selector: 'app-season-page',
@@ -20,6 +21,7 @@ import { racesTableData } from '../../constants/table.constant';
 export class SeasonPageComponent implements OnInit, OnDestroy {
   tableData: TableModel = racesTableData;
   racesSubscription: Subscription;
+  dictionary = dictionary;
 
   constructor(
     private store: Store<any>,

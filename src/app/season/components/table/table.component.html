@@ -25,5 +25,9 @@
 </ng-template>
 
 <ng-template #bodyCell let-row="row">
-  <td *ngFor="let rowItem of row.cells" class="body-cell cell text-small" [class.highlighted]="row.isRowHighlighted">{{ rowItem }}</td>
+  <td
+    *ngFor="let rowItem of row.cells"
+    class="body-cell cell text-small"
+    [class.highlighted]="row.isRowHighlighted"
+  >{{ rowItem }}</td>
 </ng-template>

@@ -1,6 +1,6 @@
 import { DriverBeModel } from './driver.model';
 
-interface CircuitBeModel {
+export interface CircuitBeModel {
   Location: {
     country: string;
     lat: string;

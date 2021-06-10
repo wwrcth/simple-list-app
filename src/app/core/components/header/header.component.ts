@@ -1,6 +1,7 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 import { routePath } from '../../constants/route-path.constant';
+import { dictionary } from '../../constants/dictionary';
 
 @Component({
   selector: 'app-header',
@@ -8,10 +9,9 @@ import { routePath } from '../../constants/route-path.constant';
   styleUrls: ['./header.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
   routePath = routePath;
+  dictionary = dictionary;
 
   constructor() {}
-
-  ngOnInit(): void {}
 }

@@ -3,6 +3,8 @@ import { NO_ERRORS_SCHEMA } from '@angular/core';
 
 import { NotFoundEntryPageComponent } from './entry.page';
 
+import { dictionary } from '../../../core/constants/dictionary';
+
 describe('NotFoundEntryPageComponent', () => {
   let component: NotFoundEntryPageComponent;
   let fixture: ComponentFixture<NotFoundEntryPageComponent>;
@@ -24,19 +26,19 @@ describe('NotFoundEntryPageComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create a 404 page component', () => {
+  it('should create 404 page component', () => {
     expect(component).toBeTruthy();
   });
 
   it('should create heading element', () => {
-    const headingElement = compiled.querySelector('.info-heading');
+    const titleElement = compiled.querySelector('.text-big');
 
-    expect(headingElement.textContent).toBe(`dictionary.pageCannotBeFound.`);
+    expect(titleElement.textContent).toBe(dictionary.notFoundHeading);
   });
 
   it('should create description elements', () => {
-    const descriptionElements = compiled.querySelectorAll('.info-description');
+    const descriptionElement = compiled.querySelector('.text-medium');
 
-    expect(descriptionElements.length).toBe(2);
+    expect(descriptionElement.textContent).toBe(dictionary.notFoundDescription);
   });
 });
